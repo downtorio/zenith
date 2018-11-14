@@ -6,6 +6,7 @@
     "url": "git+https://github.com/downtorio/zenith.git"
   },
   "dependencies": {
+    "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
     "waypoints": "^4.0.1"
   },

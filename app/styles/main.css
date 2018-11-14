@@ -1,0 +1,82 @@
+@import 'normalize.css';
+@import '_config';
+
+
+/**********************
+	General Styles
+***********************/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 90vw;
+	@mixin atMedium {
+		width: 85vw;
+	}
+}
+
+::selection {
+	background-color: $body-color;
+	color: white;
+}
+
+h1 {
+	@mixin heading;
+}
+
+h2 {
+	@mixin subheading;
+}
+
+.button {
+	background-color: transparent;
+	border: 1px solid $darkest;
+	cursor: pointer;
+	display: inline-block;
+	height: 40px;
+	margin-left: 15px;
+	overflow: hidden;
+	position: relative;
+	transition: $ease-out;
+	&:hover {
+		& .inner {
+			right: 97%;
+		}
+		& .button__link {
+			color: $body-color;
+		}
+	}
+}
+
+.inner {
+	background-color: $darkest;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	transition: $ease-out;
+	width: 100%;
+	z-index: 1;
+}
+
+.button__link {
+	color: white;
+	font-family: $body-font;
+	font-size: 0.85rem;
+	padding: 0 40px;
+	position: relative;
+	text-decoration: none;
+	top: 26%;
+	transition: $ease-out;
+	z-index: 3;
+}

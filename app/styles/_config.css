@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Muli:300,400,600,700,800');
+
+/*****************
+	Variables
+******************/
+$darkest: #1f1f1f;
+$darker: #343434;
+$body-color: #747474;
+$heading-color: #515151;
+
+$heading-font: 'Maven Pro', sans-serif;
+$body-font: 'Muli', sans-serif;
+
+$ease-out: all 0.3s ease-out;
+
+
+/*************
+	Mixins
+**************/
+@define-mixin heading {
+	color: $heading-color;
+	font-family: $heading-font;
+	font-size: 2.8rem;
+	font-weight: 500;
+	letter-spacing: -0.03rem;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+@define-mixin subheading {
+	color: $body-color;
+	font-family: $body-font;
+	font-size: 1.7rem;
+	font-weight: 300;
+	margin-top: 0;
+	text-align: center;
+}
+
+@define-mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;		/* for extra browser support */
+	}
+}
+
+@define-mixin atSmall {
+	@media (min-width: 530px) {
+		@mixin-content;
+	}
+}
+
+@define-mixin atMedium {
+	@media (min-width: 800px) {
+		@mixin-content;
+	}
+}
+
+@define-mixin atLarge {
+	@media (min-width: 1010px) {
+		@mixin-content;
+	}
+}

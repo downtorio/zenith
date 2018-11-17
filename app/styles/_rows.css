@@ -1,0 +1,22 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+
+	&--vertical-center {
+		align-items: center;
+	}
+	
+	/* Mind the order of these rows. Small > Medium > Large */
+
+	&__2--medium {
+		@mixin atMedium {
+			width: 50%;
+		}
+	}
+
+	&__4--large {
+		@mixin atLarge {
+			width: 25%;
+		}
+	}
+}

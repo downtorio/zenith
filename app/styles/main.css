@@ -2,6 +2,10 @@
 @import '_config';
 @import '_navigation';
 @import '_header';
+@import '_rows';
+@import '_features';
+@import '_projects';
+@import '_footer';
 
 
 /**********************
@@ -36,6 +40,9 @@ a {
 	@mixin atMedium {
 		width: 85vw;
 	}
+	@mixin atLarge {
+		width: 70vw;
+	}
 }
 
 ::selection {
@@ -43,21 +50,41 @@ a {
 	color: white;
 }
 
-h2 {
+.centered-heading {
 	@mixin heading;
 }
 
-h3 {
+.centered-subheading {
 	@mixin subheading;
 }
 
+.small-heading {
+	color: $heading-color;
+	font-family: $heading-font;
+	font-size: 1.3rem;
+	font-weight: 400;
+	margin: 25px 0;
+	text-align: left;
+}
+
+.basic-paragraph {
+	color: $body-color;
+	font-family: $body-font;
+	font-weight: 300;
+	font-size: 0.93rem;
+	line-height: 2;
+	margin: 20px 0;
+}
+
+/**********************
+	Button styling
+***********************/
 .button {
 	background-color: transparent;
 	border: 1px solid $darkest;
 	cursor: pointer;
 	display: inline-block;
 	height: 40px;
-	margin-left: 15px;
 	overflow: hidden;
 	position: relative;
 	transition: $ease-out;
@@ -88,7 +115,7 @@ h3 {
 	padding: 0 40px;
 	position: relative;
 	text-decoration: none;
-	top: 26%;
+	top: 30%;
 	transition: $ease-out;
 	z-index: 3;
 }

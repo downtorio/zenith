@@ -1,0 +1,98 @@
+/*************************
+	Sectioned Features
+**************************/
+.features {
+	
+	&__heading {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		min-height: 45px;
+
+		&--title {
+			@mixin subheading;
+			display: inline-block;
+			font-size: 1.4rem;
+			font-weight: 600;
+			text-align: left;
+		}
+	}
+	
+	.row {
+		margin: 70px 0;
+	}
+
+	&__row {
+		padding: 25px;
+	}
+
+	.icon {
+		margin: 0 20px;
+	}
+	.icon.mouse {
+		height: 33px;
+	}
+	.icon.dash {
+		height: 18px;
+	}
+	.icon.page {
+		height: 28px;
+	}
+	.icon.gears {
+		height: 33px;
+	}
+
+	&__desc {
+		color: $body-color;
+		font-family: $body-font;
+		font-weight: 300;
+		font-size: 0.83rem;
+		line-height: 2;
+		text-align: justify;
+	}
+}
+
+
+/********************
+	Main Features
+*********************/
+.main-features {
+	padding-bottom: 70px;
+
+	&__heading {
+		margin-bottom: 80px;
+	}
+
+	&__radical-features {
+		@mixin atMedium {
+			padding-right: 100px;
+		}
+	}
+
+	&__list {
+		left: 20px;
+		list-style-image: url('../../images/check.png');
+		padding: 10px 0;
+		position: relative;
+	}
+
+	&__image {
+		position: relative;
+		&::before {
+			background-color: $darkest;
+			content: "";
+			display: inline-block;
+			height: 460px;
+			position: absolute;
+			left: 0;
+			top: -35px;
+			width: 3px;
+			z-index: 2;
+		}
+	}
+
+	&__btn {
+		margin-top: 20px;
+	}
+}

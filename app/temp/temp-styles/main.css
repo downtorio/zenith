@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Muli:300,400,600,700,800');/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css *//* Document
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,600,700|Muli:300,400,600,700,800');/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css *//* Document
    ========================================================================== *//**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -290,6 +290,101 @@ select { /* 1 */
 		top: 62%;
 		-webkit-transform: translateY(-50%);
 		        transform: translateY(-50%);
+	}.row {
+	display: flex;
+	flex-wrap: wrap;
+}.row--vertical-center {
+		align-items: center;
+	}/* Mind the order of these rows. Small > Medium > Large */@media (min-width: 800px) {.row__2--medium {
+			width: 50%
+	}
+	}@media (min-width: 1010px) {.row__4--large {
+			width: 25%
+	}
+	}/*************************
+	Sectioned Features
+**************************/.features__heading {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		min-height: 45px;
+	}.features__heading--title {
+			color: #747474;
+			font-family: 'Muli', sans-serif;
+			font-size: 1.7rem;
+			font-weight: 300;
+			margin-top: 0;
+			text-align: center;
+			display: inline-block;
+			font-size: 1.4rem;
+			font-weight: 600;
+			text-align: left;
+		}.features .row {
+		margin: 70px 0;
+	}.features__row {
+		padding: 25px;
+	}.features .icon {
+		margin: 0 20px;
+	}.features .icon.mouse {
+		height: 33px;
+	}.features .icon.dash {
+		height: 18px;
+	}.features .icon.page {
+		height: 28px;
+	}.features .icon.gears {
+		height: 33px;
+	}.features__desc {
+		color: #747474;
+		font-family: 'Muli', sans-serif;
+		font-weight: 300;
+		font-size: 0.83rem;
+		line-height: 2;
+		text-align: justify;
+	}/********************
+	Main Features
+*********************/.main-features {
+	padding-bottom: 70px;
+}.main-features__heading {
+		margin-bottom: 80px;
+	}@media (min-width: 800px) {.main-features__radical-features {
+			padding-right: 100px
+	}
+	}.main-features__list {
+		left: 20px;
+		list-style-image: url('../../images/check.png');
+		padding: 10px 0;
+		position: relative;
+	}.main-features__image {
+		position: relative;
+	}.main-features__image::before {
+			background-color: #1f1f1f;
+			content: "";
+			display: inline-block;
+			height: 460px;
+			position: absolute;
+			left: 0;
+			top: -35px;
+			width: 3px;
+			z-index: 2;
+		}.main-features__btn {
+		margin-top: 20px;
+	}.projects {
+	padding: 70px 0;
+}.footer {
+	background-color: #131313;
+	color: #747474;
+	height: 90px;
+}.footer__wrapper {
+		display: flex;
+		font-family: 'Maven Pro', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 400;
+		justify-content: space-between;
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 	}/**********************
 	General Styles
 ***********************/* {
@@ -319,13 +414,16 @@ select { /* 1 */
 }@media (min-width: 800px) {.wrapper {
 		width: 85vw
 }
+	}@media (min-width: 1010px) {.wrapper {
+		width: 70vw
+}
 	}::-moz-selection {
 	background-color: #747474;
 	color: white;
 }::selection {
 	background-color: #747474;
 	color: white;
-}h2 {
+}.centered-heading {
 	color: #515151;
 	font-family: 'Maven Pro', sans-serif;
 	font-size: 2.8rem;
@@ -333,20 +431,35 @@ select { /* 1 */
 	letter-spacing: -0.03rem;
 	margin-bottom: 10px;
 	text-align: center;
-}h3 {
+}.centered-subheading {
 	color: #747474;
 	font-family: 'Muli', sans-serif;
 	font-size: 1.7rem;
 	font-weight: 300;
 	margin-top: 0;
 	text-align: center;
-}.button {
+}.small-heading {
+	color: #515151;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 400;
+	margin: 25px 0;
+	text-align: left;
+}.basic-paragraph {
+	color: #747474;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	font-size: 0.93rem;
+	line-height: 2;
+	margin: 20px 0;
+}/**********************
+	Button styling
+***********************/.button {
 	background-color: transparent;
 	border: 1px solid #1f1f1f;
 	cursor: pointer;
 	display: inline-block;
 	height: 40px;
-	margin-left: 15px;
 	overflow: hidden;
 	position: relative;
 	transition: all 0.3s ease-out;
@@ -369,7 +482,7 @@ select { /* 1 */
 	padding: 0 40px;
 	position: relative;
 	text-decoration: none;
-	top: 26%;
+	top: 30%;
 	transition: all 0.3s ease-out;
 	z-index: 3;
 }

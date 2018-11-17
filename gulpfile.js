@@ -21,7 +21,6 @@ gulp.task('watch', function() {
 	});
 
 	watch('./app/styles/*.css', function() {
-		//browserSync.reload();
 		gulp.start('cssInject');
 	});
 

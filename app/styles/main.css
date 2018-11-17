@@ -45,6 +45,12 @@ a {
 	}
 }
 
+.stretched-container {
+	left: 0;
+	position: absolute;
+	width: 100vw;
+}
+
 ::selection {
 	background-color: $body-color;
 	color: white;

@@ -2,6 +2,7 @@
 	background-color: #131313;
 	color: $body-color;
 	height: 90px;
+	overflow: hidden;
 
 	&__wrapper {
 		display: flex;

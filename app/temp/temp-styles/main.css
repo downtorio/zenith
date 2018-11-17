@@ -371,10 +371,38 @@ select { /* 1 */
 		margin-top: 20px;
 	}.projects {
 	padding: 70px 0;
-}.footer {
+}.projects__gallery {
+		height: 300px;
+	}/* same height as img-container */.projects__gallery .stretched-container {
+			display: flex;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}.projects__gallery .stretched-container::-webkit-scrollbar-thumb {
+				background-color: #1f1f1f;
+			}.projects__gallery .stretched-container::-webkit-scrollbar {
+				background-color: rgba(116,116,116, 0.7);
+				border-bottom: 3px solid white;
+				border-top: 3px solid white;
+				height: 7px;
+			}.projects__gallery--img-container {
+			flex-shrink: 0;
+			height: 300px;
+			width: 450px;
+		}.projects__gallery--img {
+			height: 100%;
+			-o-object-fit: cover;
+			   object-fit: cover;
+			transition: all 0.3s ease-out;
+			transition-delay: 0.15s;
+			width: 100%;
+		}.projects__gallery--img:hover {
+				-webkit-transform: scale(0.9);
+				        transform: scale(0.9);
+			}.footer {
 	background-color: #131313;
 	color: #747474;
 	height: 90px;
+	overflow: hidden;
 }.footer__wrapper {
 		display: flex;
 		font-family: 'Maven Pro', sans-serif;
@@ -417,7 +445,11 @@ select { /* 1 */
 	}@media (min-width: 1010px) {.wrapper {
 		width: 70vw
 }
-	}::-moz-selection {
+	}.stretched-container {
+	left: 0;
+	position: absolute;
+	width: 100vw;
+}::-moz-selection {
 	background-color: #747474;
 	color: white;
 }::selection {

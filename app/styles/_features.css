@@ -7,24 +7,15 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		margin-bottom: 30px;
-		min-height: 45px;
-
-		&--title {
-			@mixin subheading;
-			display: inline-block;
-			font-size: 1.4rem;
-			font-weight: 600;
-			text-align: left;
+		margin-bottom: 0;
+		height: auto;
+		@mixin atMedium {
+			min-height: 40px;
 		}
 	}
 	
 	.row {
 		margin: 70px 0;
-	}
-
-	&__row {
-		padding: 25px;
 	}
 
 	.icon {
@@ -50,6 +41,11 @@
 		font-size: 0.83rem;
 		line-height: 2;
 		text-align: justify;
+		margin: 0 auto;
+		width: 80%;
+		@mixin atMedium {
+			width: 100%;
+		}
 	}
 }
 
@@ -61,7 +57,10 @@
 	padding-bottom: 70px;
 
 	&__heading {
-		margin-bottom: 80px;
+		margin-bottom: 15px;
+		@mixin atMedium {
+			margin-bottom: 80px;
+		}
 	}
 
 	&__radical-features {
@@ -71,14 +70,28 @@
 	}
 
 	&__list {
-		left: 20px;
+		left: 40px;
 		list-style-image: url('../../images/check.png');
-		padding: 10px 0;
+		padding: 0;
 		position: relative;
+		@mixin atMedium {
+			left: 20px;
+			padding: 10px 0;
+		}
 	}
 
 	&__image {
 		position: relative;
+		margin-top: 40px;
+		max-width: 100%;
+		@mixin atMedium {
+			margin-top: 0px;
+		}
+
+		img {
+			width: 100%;
+		}
+
 		&::before {
 			background-color: $darkest;
 			content: "";
@@ -89,10 +102,25 @@
 			top: -35px;
 			width: 3px;
 			z-index: 2;
+			@mixin atMedium {
+				left: 12px;		/* padded width of .row--padded's children */
+			}
+		}
+	}
+
+	.button-container {
+		text-align: center;
+		width: 100%;
+		@mixin atMedium {
+			text-align: left;
+			width: auto;
 		}
 	}
 
 	&__btn {
-		margin-top: 20px;
+		margin: 7px;
+		@mixin atMedium {
+			margin-top: 20px;
+		}
 	}
 }

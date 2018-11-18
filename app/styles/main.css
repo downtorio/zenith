@@ -5,6 +5,7 @@
 @import '_rows';
 @import '_features';
 @import '_projects';
+@import '_sections';
 @import '_footer';
 
 
@@ -43,6 +44,22 @@ a {
 	@mixin atLarge {
 		width: 70vw;
 	}
+
+	&--vertical-margin {
+		margin: 50px 0;
+	}
+
+	&--vertical-margin-top {
+		margin-top: 50px;
+	}
+
+	&--vertical-margin-bottom {
+		margin-bottom: 50px;
+	}
+
+	&--vertical-padding {
+		padding: 70px 0;
+	}
 }
 
 .stretched-container {
@@ -52,16 +69,37 @@ a {
 }
 
 ::selection {
-	background-color: $body-color;
+	background-color: $accent;
 	color: white;
 }
 
 .centered-heading {
-	@mixin heading;
+	color: $heading-color;
+	font-family: $heading-font;
+	font-size: 2.2rem;
+	font-weight: 500;
+	letter-spacing: -0.03rem;
+	margin-bottom: 10px;
+	text-align: center;
+	@mixin atMedium {
+		font-size: 3rem;
+	}
 }
 
 .centered-subheading {
-	@mixin subheading;
+	color: $body-color;
+	font-family: $body-font;
+	font-size: 1.3rem;
+	font-weight: 300;
+	margin-top: 0;
+	text-align: center;
+	@mixin atMedium {
+		font-size: 1.7rem;
+	}
+
+	&--b-padding {
+		padding-bottom: 60px;
+	}
 }
 
 .small-heading {
@@ -71,6 +109,22 @@ a {
 	font-weight: 400;
 	margin: 25px 0;
 	text-align: left;
+	&--lighter {
+		color: $body-color;
+	}
+	&--s-margin {
+		margin: 10px 0;
+	}
+	&--features {
+		display: inline-block;
+		font-family: $body-font;
+		font-size: 1.4rem;
+		font-weight: 600;
+		text-align: left;
+		@mixin atLarge {
+			min-height: 48px;
+		}
+	}
 }
 
 .basic-paragraph {
@@ -80,6 +134,9 @@ a {
 	font-size: 0.93rem;
 	line-height: 2;
 	margin: 20px 0;
+	&--s-margin {
+		margin: 8px 0;
+	}
 }
 
 /**********************

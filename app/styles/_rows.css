@@ -1,6 +1,50 @@
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
+
+	> div {
+		padding: 15px 0;
+		@mixin atMedium {
+			padding: 0;
+		}
+	}
+
+	&--padded {
+		> div {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@mixin atMedium{
+			> div {		/* padding on all direct div children */				
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+			> div:first-child {			
+				padding-left: 0;
+			}
+			> div:last-child {		
+				padding-right: 0;
+			}
+		}
+
+		&--wide {
+			> div {
+				padding: 0;
+			}
+			@mixin atMedium {
+				> div {
+					padding: 25px;
+				}
+				> div:first-child {
+					padding-left: 0;
+				}
+				>div:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
 
 	&--vertical-center {
 		align-items: center;
@@ -8,9 +52,20 @@
 	
 	/* Mind the order of these rows. Small > Medium > Large */
 
+	&__2--small {
+		width: 50%;
+	}
+
 	&__2--medium {
 		@mixin atMedium {
 			width: 50%;
+		}
+	}
+
+	&__3--medium {
+		width: 100%;
+		@mixin atMedium {
+			width: 33.33333%;
 		}
 	}
 
